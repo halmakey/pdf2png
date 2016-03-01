@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0500BB991C859B9000E4F801 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0500BB981C859B9000E4F801 /* AppKit.framework */; };
+		0500BB9F1C85AF8400E4F801 /* pdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0500BB9E1C85AF8400E4F801 /* pdf.swift */; };
 		05F5B82E1C85920D0000E035 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F5B82D1C85920D0000E035 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0500BB9C1C85A78D00E4F801 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05F5B8281C85920D0000E035 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -23,6 +34,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0500BB981C859B9000E4F801 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0500BB9E1C85AF8400E4F801 /* pdf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pdf.swift; sourceTree = "<group>"; };
 		05F5B82A1C85920D0000E035 /* pdf2png */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pdf2png; sourceTree = BUILT_PRODUCTS_DIR; };
 		05F5B82D1C85920D0000E035 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0500BB991C859B9000E4F801 /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +57,7 @@
 			children = (
 				05F5B82C1C85920D0000E035 /* pdf2png */,
 				05F5B82B1C85920D0000E035 /* Products */,
+				716DA3168883EE518B2E35AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +73,17 @@
 			isa = PBXGroup;
 			children = (
 				05F5B82D1C85920D0000E035 /* main.swift */,
+				0500BB9E1C85AF8400E4F801 /* pdf.swift */,
 			);
 			path = pdf2png;
+			sourceTree = "<group>";
+		};
+		716DA3168883EE518B2E35AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0500BB981C859B9000E4F801 /* AppKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +96,7 @@
 				05F5B8261C85920D0000E035 /* Sources */,
 				05F5B8271C85920D0000E035 /* Frameworks */,
 				05F5B8281C85920D0000E035 /* CopyFiles */,
+				0500BB9C1C85A78D00E4F801 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -119,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0500BB9F1C85AF8400E4F801 /* pdf.swift in Sources */,
 				05F5B82E1C85920D0000E035 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +265,7 @@
 				05F5B8331C85920D0000E035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
