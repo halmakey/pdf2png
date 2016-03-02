@@ -38,6 +38,8 @@ func pdf2png(inurl: NSURL, outurl: NSURL, var width: CGFloat, var height: CGFloa
 
     let ri = NSImage(size: bounds.size)
     ri.lockFocus()
+    NSGraphicsContext.currentContext()?.imageInterpolation = .High
+    NSGraphicsContext.currentContext()?.colorRenderingIntent = .AbsoluteColorimetric
     pdfImageRep?.drawInRect(bounds)
 
     let bitmapRep = NSBitmapImageRep(focusedViewRect: bounds)
