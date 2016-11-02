@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0500BB991C859B9000E4F801 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0500BB981C859B9000E4F801 /* AppKit.framework */; };
-		0500BB9F1C85AF8400E4F801 /* pdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0500BB9E1C85AF8400E4F801 /* pdf.swift */; };
+		0536ED7F1DC9D53C00EC4C64 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0536ED7E1DC9D53C00EC4C64 /* main.swift */; };
 		05F5B82E1C85920D0000E035 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F5B82D1C85920D0000E035 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +21,15 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0536ED7A1DC9D53C00EC4C64 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 		05F5B8281C85920D0000E035 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -35,12 +44,20 @@
 
 /* Begin PBXFileReference section */
 		0500BB981C859B9000E4F801 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		0500BB9E1C85AF8400E4F801 /* pdf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pdf.swift; sourceTree = "<group>"; };
+		0536ED7C1DC9D53C00EC4C64 /* pdf2pdf */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pdf2pdf; sourceTree = BUILT_PRODUCTS_DIR; };
+		0536ED7E1DC9D53C00EC4C64 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		05F5B82A1C85920D0000E035 /* pdf2png */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pdf2png; sourceTree = BUILT_PRODUCTS_DIR; };
 		05F5B82D1C85920D0000E035 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0536ED791DC9D53C00EC4C64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05F5B8271C85920D0000E035 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,10 +69,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0536ED7D1DC9D53C00EC4C64 /* pdf2pdf */ = {
+			isa = PBXGroup;
+			children = (
+				0536ED7E1DC9D53C00EC4C64 /* main.swift */,
+			);
+			path = pdf2pdf;
+			sourceTree = "<group>";
+		};
 		05F5B8211C85920D0000E035 = {
 			isa = PBXGroup;
 			children = (
 				05F5B82C1C85920D0000E035 /* pdf2png */,
+				0536ED7D1DC9D53C00EC4C64 /* pdf2pdf */,
 				05F5B82B1C85920D0000E035 /* Products */,
 				716DA3168883EE518B2E35AD /* Frameworks */,
 			);
@@ -65,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				05F5B82A1C85920D0000E035 /* pdf2png */,
+				0536ED7C1DC9D53C00EC4C64 /* pdf2pdf */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				05F5B82D1C85920D0000E035 /* main.swift */,
-				0500BB9E1C85AF8400E4F801 /* pdf.swift */,
 			);
 			path = pdf2png;
 			sourceTree = "<group>";
@@ -89,6 +115,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0536ED7B1DC9D53C00EC4C64 /* pdf2pdf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0536ED821DC9D53C00EC4C64 /* Build configuration list for PBXNativeTarget "pdf2pdf" */;
+			buildPhases = (
+				0536ED781DC9D53C00EC4C64 /* Sources */,
+				0536ED791DC9D53C00EC4C64 /* Frameworks */,
+				0536ED7A1DC9D53C00EC4C64 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pdf2pdf;
+			productName = pdf2pdf;
+			productReference = 0536ED7C1DC9D53C00EC4C64 /* pdf2pdf */;
+			productType = "com.apple.product-type.tool";
+		};
 		05F5B8291C85920D0000E035 /* pdf2png */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05F5B8311C85920D0000E035 /* Build configuration list for PBXNativeTarget "pdf2png" */;
@@ -113,10 +156,13 @@
 		05F5B8221C85920D0000E035 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = rubi3;
 				TargetAttributes = {
+					0536ED7B1DC9D53C00EC4C64 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					05F5B8291C85920D0000E035 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -135,16 +181,24 @@
 			projectRoot = "";
 			targets = (
 				05F5B8291C85920D0000E035 /* pdf2png */,
+				0536ED7B1DC9D53C00EC4C64 /* pdf2pdf */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0536ED781DC9D53C00EC4C64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0536ED7F1DC9D53C00EC4C64 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05F5B8261C85920D0000E035 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0500BB9F1C85AF8400E4F801 /* pdf.swift in Sources */,
 				05F5B82E1C85920D0000E035 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +206,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		0536ED801DC9D53C00EC4C64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0536ED811DC9D53C00EC4C64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		05F5B82F1C85920D0000E035 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -249,6 +321,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0536ED821DC9D53C00EC4C64 /* Build configuration list for PBXNativeTarget "pdf2pdf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0536ED801DC9D53C00EC4C64 /* Debug */,
+				0536ED811DC9D53C00EC4C64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		05F5B8251C85920D0000E035 /* Build configuration list for PBXProject "pdf2png" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
